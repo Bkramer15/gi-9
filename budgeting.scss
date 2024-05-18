@@ -1,0 +1,159 @@
+// Define variables
+$primaryColor: #3498db;
+$secondaryColor: #2ecc71;
+$TextColor: #1A1A1A;
+$textColor: #666666;
+$bodyColor: #f2f2f2;
+
+// Define a mixin for linear gradient background
+@mixin linear-gradient-bg($angle: 90deg, $color1: $primaryColor, $color2: $secondaryColor) {
+  background: linear-gradient($angle, $color1, $color2);
+}
+
+// Apply styles
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    @include linear-gradient-bg;
+    color:$TextColor;
+
+    h1 {
+        color: $TextColor;
+        font-size: 27.5px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Playfair Display", serif; // Removed extra space after font name
+    }
+
+    p {
+        color: $TextColor;
+        font-size: 16px;
+        font-family: "Hind", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+}
+
+main {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+    @media screen and (min-width: 769px) and (max-width: 1024px){
+        h1{
+            font-size: 30px;
+        }
+
+        p{
+           font-size: 20px;
+           color: $TextColor; 
+        }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1500px){
+        h1{
+            font-size: 40px;
+        }
+
+        p{
+           font-size: 30px;
+           color: $TextColor; 
+        }
+    }
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px;
+
+    h2 {
+        color: #52AC78;
+        font-size: 18px;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+    }
+
+}
+
+.totalBudget {
+    width: 300px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px;
+
+    h1 {
+        color: $TextColor;
+        font-size: 25.5px;
+        text-decoration: underline;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Playfair Display", serif; // Removed extra space after font name
+    }
+
+    h2 {
+        color: #52AC78;
+        font-size: 18px;
+        text-align: left;
+        font-family: "Playfair Display", serif;
+    }
+
+    &.total-budget-gradient {
+        @include linear-gradient-bg(45deg);
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: auto;
+    width: 100px;
+    padding: 10px;
+    background-color: $secondaryColor;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 10%;
+
+    &:hover {
+        background-color: darken($secondaryColor, 10%);
+    }
+}
+
+#addIncome,
+#addExpense {
+    display: inline;
+    color: $primaryColor;
+    width: fit-content;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    margin: 10px auto; // Added margin for spacing
+
+    &:hover{
+        background-color: $primaryColor;
+        color: white;
+    }
+}

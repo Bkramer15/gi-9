@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="budgeting.css">
+    <title>Expected Family Contribution (EFC) Calculator</title>
+</head>
+<body>
+<header>
+    <h1>POCKET GUARD</h1>
+</header>
+<main>
+    <p>Finance can be hard but having a sound budget and knowing where your money is going can help maintain that budget</p>
+    <section>
+        <form>
+            <h2>Income Source</h2>
+            <label for="incomeSource">Income name</label>
+            <input type="number" name="incomeSource" id="incomeSource" required>
+            <button id="addIncome" type="button">+Add Income</button>
+            <div id="incomeInputs"></div>
+
+            <h2>Expense Source</h2>
+            <label for="expenseSource">Expense name</label>
+            <input type="number" id="expenseSource" name="expenseSource" required>
+            <button id="addExpense" type="button">+Add Expense</button>
+            <div id="expenseInputs"></div>
+
+            <button type="submit" id="button">Calculate</button>
+        </form>
+    </section>
+    <section class="totalBudget">
+        <h1>Total Budget</h1>
+        <h2 id="incomeTotal">Income total:</h2>
+        <h2 id="expenseTotal">Expense total:</h2>
+        <h2 id="remainingBudget">Remaining budget:</h2>
+    </section>
+</main>
+<script src="budget.js"></script>
+</body>
+</html>
