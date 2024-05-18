@@ -1,1 +1,1 @@
-I was tasked with creatin a budget calcualtor.Aftwe the user addins a income and expense, they must hit add income and expense then hit the submit button for the display.THE only files that contain that code are Budget,js, fafsa.html and budgeting.scss
+I was tasked with creating a budget calcualtor.After the user adds a income and expense, they must hit add income and expense then hit the submit button for the display.THE only files that contain that code are Budget,js, fafsa.html and budgeting.scss
